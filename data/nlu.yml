@@ -1,0 +1,106 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+# Here Here
+- intent: ask_balance
+  examples: |
+    - How much money do I have in my account?
+    - My balance
+    - money in my account
+    - what is my balance
+    - balance
+    - paisa
+    - money
+    - amount in my account
+    - how much money is remaining in my account
+
+# Change starts here
+
+- intent: ask_info
+  examples: |
+    - My name is [John Mayers](name) my account number is [12345](account_number) my phone number is [9856742311](phone_number)
+    - Name is [Sita Rana](name) [12352](account_number)[987600564](phone_number)
+    - [Michael Bay](name) [09784](account_number) [9860895673](phone_number)
+    - name[Ram Thapa](name) [12436]](account_number) [9860895673](phone_number)
+    - [John Doe](name) [16389](account_number)[9860895673](phone_number)
+    - [Tim Burton](name)account number [45367] 9857644531](phone_number)
+    - [Gyanendra Shah](name)[16389](account_number)[9860895673](phone_number)
+
+
+# - intent: ask_account_number
+#   examples: |
+#     - my account number is [12345](account_number)
+#     - [12352](account_number)
+#     - account number [45367]
+#     - [12436]](account_number)
+#     - [09784](account_number)
+#     - [19645](account_number)
+#     - [16389](account_number)
+
+# - intent: ask_phone_number
+#   examples: |
+#     - my phone number is [9856742311](phone_number)
+#     - [987600564](phone_number)
+#     - phone number [9875643241](phone_number)
+#     - [9871425792](phone_number)
+#     - [9857644531](phone_number)
+#     - [9802345612](phone_number)
+#     - [981423567](phone_number)
+#     - [9860895673](phone_number)
+#     - [9812456783](phone_number)
+
+
+
+- intent: get_detail
+  examples: |
+    - Okay
+    - Thanks
+
+- intent: get_history
+  examples: |
+    - get my history
+    - my transaction history
+    - transaction history
+    - history 
+    - transaction
+    - my transactions
+    - my bank history
+    - my transaction details
+    - transactions
+  
+
+
+
+
+
+# Ends Here

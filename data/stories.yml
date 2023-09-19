@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+
+# - story: greet
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - story: user wants to check balance
+#   steps:
+#   - intent: ask_balance
+#   - action: utter_ask_balance
+#   - intent: hello
+#   - action: action_get_details
+
+# - story: main action
+#   steps:
+#   - intent: hello
+#   - action: action_hello
+
+- story: get details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_balance
+  - action: utter_ask_balance
+  - intent: ask_info
+    entities: 
+      - name : Ram Thapa
+      - account_number : 12345
+      - phone_number : 9876435324
+  - slot_was_set:
+    - name : Ram Thapa
+    - account_number : 12345
+    - phone_number : 9876435324
+  - action: action_get_details
+
+  # - slot_was_set:
+  #   - name : null
+  #   - account_number : null
+  #   - phone_number : null
+
+  # - action: utter_goodbye
+  # - action: utter_respond
+
+story: get history
+steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_history
+  - action: utter_get_history
+  - intent: ask_info
+    entities: 
+      - name : Ram Thapa
+      - account_number : 12345
+      - phone_number : 9876435324
+  - slot_was_set:
+    - name : Ram Thapa
+    - account_number : 12345
+    - phone_number : 9876435324
+  - action: action_get_history

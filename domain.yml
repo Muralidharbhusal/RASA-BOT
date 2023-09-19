@@ -1,0 +1,85 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_balance
+  - ask_name
+  - ask_account_number
+  - ask_phone_number
+  - get_history
+  - ask_info
+
+entities:
+- name
+- phone_number
+- account_number
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings: 
+    - type: from_entity
+      entity: name
+  phone_number:
+    type: text
+    influence_conversation: false
+    mappings: 
+    - type: from_entity
+      entity: phone_number
+  account_number:
+    type: text
+    influence_conversation: false
+    mappings: 
+    - type: from_entity
+      entity: account_number
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+  - text: "Would you like to get your balance info or transaction history?"
+
+  # utter_respond:
+  #   - text: "{name} balance for your account {account_number} is 1000"
+
+  ## Change Star Here
+
+
+  utter_ask_balance:
+  - text: "please input your name, account number and phone number to check balance"
+
+  utter_ask_info:
+  - text: "please input your name, account number and phone number"
+
+
+  utter_goodbye:
+  - text: "Thank You! Contact customer care for further information"
+
+  utter_get_history:
+  - text: "please input your name, account number and phone number to check transaction history"
+  
+  
+  
+
+  
+actions:
+  - action_get_details
+  # - utter_respond
+  - utter_greet
+  - action_get_history
+  
+
+# Ends Here
+
+
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

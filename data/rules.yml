@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: go to transaction history
+  steps:
+    - intent: get_history
+    - action: utter_get_history
+
+- rule: bye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
